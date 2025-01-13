@@ -1,0 +1,13 @@
+numpy
+pandas
+scikit-learn
+catboost
+statsmodels
+matplotlib
+seaborn
+notebook
+ipython
+jupyter
+ipykernel
+flask
+umap-learn
