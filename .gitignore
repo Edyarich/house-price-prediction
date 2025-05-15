@@ -3,6 +3,6 @@ catboost_info/
 env/
 __pycache__/
 
-data/
+*.csv
 !data/test-web.csv
 
