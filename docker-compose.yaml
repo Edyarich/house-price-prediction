@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  model-service:
+    build:
+      context: .
+      dockerfile: docker/model.dockerfile
+    image: edyarich/house-price-prediction-model:latest
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app               # hot-reload model.pkl if you retrain
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend.dockerfile
+    image: edyarich/house-price-prediction-frontend:latest
+    depends_on:
+      - model-service
+    environment:
+      - MODEL_SERVICE_URL=http://model-service:5000
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
