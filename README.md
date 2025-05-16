@@ -96,7 +96,17 @@ flowchart LR
 
 ## Screenshots
 
-*Screenshots coming soon – open a PR if you’d like to contribute!*
+Web interface:
+
+[<img src="images/initial.png" width="600"/>](images/initial.png)
+
+Upload `./data/test-web.csv`:
+
+[<img src="images/after-uploading-csv.png" width="600"/>](images/after-uploading-csv.png)
+
+Wait ~5 seconds to get results:
+
+[<img src="images/final.png" width="600"/>](images/final.png)
 
 
 ## Local running
